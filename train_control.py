@@ -237,9 +237,9 @@ async def main():
         #---------- Loops that control running time ----------
         #for loop for explicit control
         #while loop to shut down at a specific time
-        for j in range(1): #this could be a while loop
+        #for j in range(1): #this could be a while loop
         #datetime.now().hour gives output in 24-h time format
-        #while datetime.datetime.now().hour < 12:
+        while datetime.datetime.now().hour < 22:
             numFwdLoops=random.choice([3,4,5])
             print('Program will run '+str(numFwdLoops)+' forward loops')
             for i in range(numFwdLoops):
