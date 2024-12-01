@@ -234,8 +234,9 @@ async def main():
     client = BleakClient(address)
     try:
         await client.connect()
-        #for j in range(10): #this could be a while loop
-        while datetime.datetime.now().hour < 12:
+        for j in range(2): #this could be a while loop
+        #datetime.now().hour gives output in 24-h time format
+        #while datetime.datetime.now().hour < 12:
             numFwdLoops=random.choice([3,4,5])
             print('Program will run '+str(numFwdLoops)+' forward loops')
             for i in range(numFwdLoops):
